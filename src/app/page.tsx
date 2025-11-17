@@ -1,5 +1,8 @@
 import { FeedPost } from '@/components/feed-post';
 import { Separator } from '@/components/ui/separator';
+import { NewsfeedSummarizer } from '@/components/newsfeed-summarizer';
+import { BottomSheetButton } from '@/components/bottom-sheet-button';
+import { ContentCarousel } from '@/components/content-carousel';
 
 const posts = [
   {
@@ -55,14 +58,38 @@ export default function Home() {
           The essential digital ecosystem for students.
         </p>
       </header>
-      
-      <main className="max-w-2xl mx-auto">
-        <h2 className="font-headline text-3xl font-semibold mb-6">The Hub</h2>
-        <div className="flex flex-col gap-8">
-          {posts.map((post) => (
-            <FeedPost key={post.id} post={post} />
-          ))}
-        </div>
+
+      <section className="mb-16">
+        <ContentCarousel />
+      </section>
+
+      <main className="max-w-2xl mx-auto space-y-12">
+        <section>
+          <h2 className="font-headline text-3xl font-semibold mb-6">
+            AI Summarizer
+          </h2>
+          <NewsfeedSummarizer />
+        </section>
+
+        <Separator />
+
+        <section>
+          <h2 className="font-headline text-3xl font-semibold mb-6">
+            Component Demo
+          </h2>
+          <BottomSheetButton />
+        </section>
+
+        <Separator />
+        
+        <section>
+          <h2 className="font-headline text-3xl font-semibold mb-6">The Hub</h2>
+          <div className="flex flex-col gap-8">
+            {posts.map(post => (
+              <FeedPost key={post.id} post={post} />
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   );

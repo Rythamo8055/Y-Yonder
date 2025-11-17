@@ -22,7 +22,7 @@ export function BottomSheetButton() {
       </SheetTrigger>
       <SheetContent
         side="bottom"
-        className="rounded-t-2xl h-3/4 border-t-2 bg-background/80"
+        className="rounded-t-2xl h-3/4 border-t-2 bg-background/80 backdrop-blur-xl"
       >
         <div className="mx-auto w-full max-w-md">
           <SheetHeader className="text-center">
