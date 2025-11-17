@@ -8,57 +8,57 @@ body {
 
 @layer base {
   :root {
-    --background: 53 44% 89%;
-    --foreground: 20 14% 4%;
-    --card: 53 44% 94%;
-    --card-foreground: 20 14% 4%;
-    --popover: 53 44% 94%;
-    --popover-foreground: 20 14% 4%;
-    --primary: 12 56% 67%;
-    --primary-foreground: 10 50% 98%;
-    --secondary: 53 20% 85%;
-    --secondary-foreground: 20 14% 4%;
-    --muted: 53 20% 85%;
-    --muted-foreground: 53 10% 45%;
-    --accent: 267 85% 58%;
-    --accent-foreground: 270 50% 98%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 53 20% 80%;
-    --input: 53 20% 85%;
-    --ring: 12 56% 67%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --background: 239 65% 94%; /* Latte Base */
+    --foreground: 238 23% 29%; /* Latte Text */
+    --card: 239 45% 90%; /* Latte Mantle */
+    --card-foreground: 238 23% 29%; /* Latte Text */
+    --popover: 239 45% 90%; /* Latte Mantle */
+    --popover-foreground: 238 23% 29%; /* Latte Text */
+    --primary: 333 58% 72%; /* Latte Mauve */
+    --primary-foreground: 239 65% 94%; /* Latte Base */
+    --secondary: 201 48% 77%; /* Latte Sapphire */
+    --secondary-foreground: 239 65% 94%; /* Latte Base */
+    --muted: 239 25% 85%; /* Latte Surface2 */
+    --muted-foreground: 238 16% 41%; /* Latte Subtext0 */
+    --accent: 258 82% 78%; /* Latte Lavender */
+    --accent-foreground: 239 65% 94%; /* Latte Base */
+    --destructive: 350 73% 71%; /* Latte Red */
+    --destructive-foreground: 239 65% 94%; /* Latte Base */
+    --border: 238 10% 75%; /* Latte Overlay0 */
+    --input: 239 15% 80%; /* Latte Surface1 */
+    --ring: 333 58% 72%; /* Latte Mauve */
+    --chart-1: 333 58% 72%; /* Latte Mauve */
+    --chart-2: 350 73% 71%; /* Latte Red */
+    --chart-3: 5 71% 73%; /* Latte Peach */
+    --chart-4: 178 44% 66%; /* Latte Teal */
+    --chart-5: 201 48% 77%; /* Latte Sapphire */
     --radius: 0.75rem;
   }
   .dark {
-    --background: 20 14% 4%;
-    --foreground: 53 44% 89%;
-    --card: 20 14% 8%;
-    --card-foreground: 53 44% 89%;
-    --popover: 20 14% 8%;
-    --popover-foreground: 53 44% 89%;
-    --primary: 12 56% 67%;
-    --primary-foreground: 10 50% 98%;
-    --secondary: 20 14% 12%;
-    --secondary-foreground: 53 44% 89%;
-    --muted: 20 14% 12%;
-    --muted-foreground: 53 10% 65%;
-    --accent: 267 85% 58%;
-    --accent-foreground: 270 50% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 20 14% 15%;
-    --input: 20 14% 12%;
-    --ring: 12 56% 67%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --background: 240 10% 15%; /* Macchiato Base */
+    --foreground: 240 12% 80%; /* Macchiato Text */
+    --card: 240 8% 13%; /* Macchiato Mantle */
+    --card-foreground: 240 12% 80%; /* Macchiato Text */
+    --popover: 240 8% 13%; /* Macchiato Mantle */
+    --popover-foreground: 240 12% 80%; /* Macchiato Text */
+    --primary: 217 83% 82%; /* Macchiato Mauve */
+    --primary-foreground: 240 10% 15%; /* Macchiato Base */
+    --secondary: 357 100% 80%; /* Macchiato Rosewater */
+    --secondary-foreground: 240 10% 15%; /* Macchiato Base */
+    --muted: 240 7% 18%; /* Macchiato Surface2 */
+    --muted-foreground: 240 7% 59%; /* Macchiato Subtext0 */
+    --accent: 258 92% 86%; /* Macchiato Lavender */
+    --accent-foreground: 240 10% 15%; /* Macchiato Base */
+    --destructive: 350 83% 80%; /* Macchiato Red */
+    --destructive-foreground: 240 10% 15%; /* Macchiato Base */
+    --border: 240 5% 26%; /* Macchiato Overlay0 */
+    --input: 240 6% 22%; /* Macchiato Surface1 */
+    --ring: 217 83% 82%; /* Macchiato Mauve */
+    --chart-1: 217 83% 82%; /* Macchiato Mauve */
+    --chart-2: 350 83% 80%; /* Macchiato Red */
+    --chart-3: 27 100% 81%; /* Macchiato Peach */
+    --chart-4: 178 71% 78%; /* Macchiato Teal */
+    --chart-5: 201 88% 79%; /* Macchiato Sapphire */
   }
 }
 

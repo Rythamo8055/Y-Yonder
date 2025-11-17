@@ -37,10 +37,6 @@ export function DockNavigation() {
                       ? "bg-primary text-primary-foreground scale-110 -translate-y-2"
                       : "bg-transparent text-foreground/70 hover:bg-accent/50 hover:text-accent-foreground"
                   )}
-                  // Prevent 404s on uncreated pages
-                  onClick={(e) => {
-                    if (item.href !== '/') e.preventDefault();
-                  }}
                 >
                   <item.icon className="w-6 h-6" />
                   <span className="sr-only">{item.label}</span>
