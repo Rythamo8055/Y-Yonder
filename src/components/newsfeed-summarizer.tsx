@@ -1,6 +1,7 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import { summarizePostAction } from "@/app/actions";
 import { Button } from "@/components/ui/button";
 import {
@@ -35,7 +36,7 @@ function SubmitButton() {
 }
 
 export function NewsfeedSummarizer() {
-  const [state, formAction] = useFormState(summarizePostAction, initialState);
+  const [state, formAction] = useActionState(summarizePostAction, initialState);
 
   return (
     <div className="w-full max-w-2xl mx-auto">
