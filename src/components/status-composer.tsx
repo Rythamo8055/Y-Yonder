@@ -8,13 +8,24 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetClose,
 } from '@/components/ui/sheet';
 import { Textarea } from './ui/textarea';
 import { Globe, Image as ImageIcon, Send } from 'lucide-react';
+import { useState } from 'react';
 
 export function StatusComposer() {
+  const [open, setOpen] = useState(false);
+
+  const handlePost = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    // Logic to handle post submission will go here
+    console.log('Posting content...');
+    setOpen(false);
+  };
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <div className="flex items-center gap-4 p-4 rounded-2xl bg-card/60 backdrop-blur-lg border-white/10 shadow-lg cursor-pointer hover:bg-card/80 transition-colors">
           <Avatar>
@@ -54,7 +65,7 @@ export function StatusComposer() {
                   <Globe />
                 </Button>
               </div>
-              <Button>
+              <Button onClick={handlePost}>
                 <Send className="mr-2" /> Post
               </Button>
             </div>

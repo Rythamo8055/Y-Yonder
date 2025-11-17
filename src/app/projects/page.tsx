@@ -9,8 +9,17 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Input } from '@/components/ui/input';
 import { Plus } from 'lucide-react';
+import { useState } from 'react';
 
 const projects = [
   {
@@ -50,6 +59,7 @@ const projects = [
 ];
 
 export default function ProjectsPage() {
+  const [open, setOpen] = useState(false);
   return (
     <div className="container mx-auto px-4 py-8 pb-32">
       <header className="text-center my-12 md:my-16">
@@ -99,15 +109,38 @@ export default function ProjectsPage() {
             </div>
           </TabsContent>
         </Tabs>
-        <Button className="fixed bottom-24 right-8 h-16 w-16 rounded-2xl shadow-lg z-40">
-          <Plus size={32} />
-        </Button>
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger asChild>
+            <Button className="fixed bottom-24 right-8 h-16 w-16 rounded-2xl shadow-lg z-40">
+              <Plus size={32} />
+            </Button>
+          </SheetTrigger>
+          <SheetContent
+            side="bottom"
+            className="rounded-t-2xl h-auto border-t-2 bg-background/80 backdrop-blur-xl"
+          >
+            <div className="mx-auto w-full max-w-lg">
+              <SheetHeader className="text-left">
+                <SheetTitle className="font-headline text-2xl">
+                  Create a New Project
+                </SheetTitle>
+              </SheetHeader>
+              <div className="py-4 space-y-4">
+                <Input placeholder="Project Title" className="bg-background/80" />
+                <Input placeholder="Invite members..." className="bg-background/80" />
+                <Button className="w-full" onClick={() => setOpen(false)}>
+                  Create Project
+                </Button>
+              </div>
+            </div>
+          </SheetContent>
+        </Sheet>
       </main>
     </div>
   );
 }
 
-function ProjectList({ projects }: { projects: typeof projects }) {
+function ProjectList({ projects }: { projects: (typeof projects)[0][] }) {
   if (projects.length === 0) {
     return (
       <div className="flex justify-center items-center h-48 bg-card/60 backdrop-blur-lg border-white/10 shadow-lg rounded-2xl">
@@ -135,6 +168,7 @@ function ProjectList({ projects }: { projects: typeof projects }) {
                   <Avatar key={member.name} className="h-8 w-8 border-2">
                     <AvatarImage src={member.src} />
                     <AvatarFallback>{member.name}</AvatarFallback>
+
                   </Avatar>
                 ))}
               </div>

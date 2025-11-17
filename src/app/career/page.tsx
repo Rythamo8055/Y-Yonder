@@ -55,6 +55,7 @@ const jobPostings = [
 
 export default function CareerLaunchpadPage() {
   const [bookmarked, setBookmarked] = useState<number[]>([]);
+  const [open, setOpen] = useState(false);
 
   const toggleBookmark = (id: number) => {
     setBookmarked(prev =>
@@ -79,7 +80,7 @@ export default function CareerLaunchpadPage() {
             placeholder="Search by role, company, keyword..."
             className="bg-card/60 backdrop-blur-lg border-white/10"
           />
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="shrink-0">
                 <Filter size={18} />
@@ -117,7 +118,11 @@ export default function CareerLaunchpadPage() {
                     <h3 className="font-semibold">Experience Level (Years)</h3>
                     <Slider defaultValue={[1]} max={10} step={1} />
                   </div>
-                  <Button size="lg" className="w-full">
+                  <Button
+                    size="lg"
+                    className="w-full"
+                    onClick={() => setOpen(false)}
+                  >
                     Apply Filters
                   </Button>
                 </div>
@@ -156,8 +161,8 @@ export default function CareerLaunchpadPage() {
                       size={20}
                       className={
                         bookmarked.includes(job.id)
-                          ? 'text-primary fill-primary'
-                          : ''
+                          ? 'text-primary fill-primary transition-all duration-300'
+                          : 'transition-all duration-300'
                       }
                     />
                   </Button>

@@ -17,8 +17,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Edit } from 'lucide-react';
+import { useState } from 'react';
 
 const featuredProjects = [
   {
@@ -57,6 +67,7 @@ const skills = [
 ];
 
 export default function ProfilePage() {
+  const [open, setOpen] = useState(false);
   return (
     <div className="pb-32">
       <header className="relative h-48 md:h-64">
@@ -74,13 +85,42 @@ export default function ProfilePage() {
             <AvatarFallback>JD</AvatarFallback>
           </Avatar>
         </div>
-        <Button
-          size="icon"
-          variant="secondary"
-          className="absolute bottom-4 right-4 z-10"
-        >
-          <Edit size={18} />
-        </Button>
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger asChild>
+            <Button
+              size="icon"
+              variant="secondary"
+              className="absolute bottom-4 right-4 z-10"
+            >
+              <Edit size={18} />
+            </Button>
+          </SheetTrigger>
+          <SheetContent
+            side="bottom"
+            className="rounded-t-2xl h-auto border-t-2 bg-background/80 backdrop-blur-xl"
+          >
+            <div className="mx-auto w-full max-w-lg">
+              <SheetHeader className="text-left">
+                <SheetTitle className="font-headline text-2xl">
+                  Edit Profile
+                </SheetTitle>
+              </SheetHeader>
+              <div className="py-4 space-y-4">
+                <Input
+                  defaultValue="Jane Doe"
+                  className="bg-background/80"
+                />
+                <Textarea
+                  defaultValue="B.S. in Computer Science @ State University"
+                  className="bg-background/80"
+                />
+                <Button className="w-full" onClick={() => setOpen(false)}>
+                  Save Changes
+                </Button>
+              </div>
+            </div>
+          </SheetContent>
+        </Sheet>
       </header>
 
       <div className="container mx-auto px-4 pt-20 text-center">
