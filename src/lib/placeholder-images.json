@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "carousel-1",
+      "description": "Abstract pink and blue shapes",
+      "imageUrl": "https://images.unsplash.com/photo-1533158326339-7f3cf2404354?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGNvbG9yZnVsfGVufDB8fHx8MTc2MzI3ODg1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract colorful"
+    },
+    {
+      "id": "carousel-2",
+      "description": "A winding road through a forest",
+      "imageUrl": "https://images.unsplash.com/photo-1592930506084-71a406f242a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmb3Jlc3QlMjByb2FkfGVufDB8fHx8MTc2MzM2MTQ5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "forest road"
+    },
+    {
+      "id": "carousel-3",
+      "description": "Minimalist architecture",
+      "imageUrl": "https://images.unsplash.com/photo-1534094830444-3a1e21f7e3e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc2MzI4NTI1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "minimalist architecture"
+    },
+    {
+      "id": "carousel-4",
+      "description": "A serene lake at sunrise",
+      "imageUrl": "https://images.unsplash.com/photo-1597369502740-6145d25338c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsYWtlJTIwc3VucmlzZXxlbnwwfHx8fDE3NjMyNzYxMjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lake sunrise"
+    },
+    {
+      "id": "carousel-5",
+      "description": "Cityscape at night",
+      "imageUrl": "https://images.unsplash.com/photo-1708474660686-7a00a0ffe4ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2l0eSUyMG5pZ2h0fGVufDB8fHx8MTc2MzI4MDcxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city night"
+    }
+  ]
 }
