@@ -2,63 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
-    --background: 239 65% 94%; /* Latte Base */
-    --foreground: 238 23% 29%; /* Latte Text */
-    --card: 239 45% 90%; /* Latte Mantle */
-    --card-foreground: 238 23% 29%; /* Latte Text */
-    --popover: 239 45% 90%; /* Latte Mantle */
-    --popover-foreground: 238 23% 29%; /* Latte Text */
-    --primary: 333 58% 72%; /* Latte Mauve */
-    --primary-foreground: 239 65% 94%; /* Latte Base */
-    --secondary: 201 48% 77%; /* Latte Sapphire */
-    --secondary-foreground: 239 65% 94%; /* Latte Base */
-    --muted: 239 25% 85%; /* Latte Surface2 */
-    --muted-foreground: 238 16% 41%; /* Latte Subtext0 */
-    --accent: 258 82% 78%; /* Latte Lavender */
-    --accent-foreground: 239 65% 94%; /* Latte Base */
-    --destructive: 350 73% 71%; /* Latte Red */
-    --destructive-foreground: 239 65% 94%; /* Latte Base */
-    --border: 238 10% 75%; /* Latte Overlay0 */
-    --input: 239 15% 80%; /* Latte Surface1 */
-    --ring: 333 58% 72%; /* Latte Mauve */
-    --chart-1: 333 58% 72%; /* Latte Mauve */
-    --chart-2: 350 73% 71%; /* Latte Red */
-    --chart-3: 5 71% 73%; /* Latte Peach */
-    --chart-4: 178 44% 66%; /* Latte Teal */
-    --chart-5: 201 48% 77%; /* Latte Sapphire */
+    --background: 40 33% 96%; /* Frappuccino */
+    --foreground: 40 10% 25%;
+    --card: 40 33% 93%;
+    --card-foreground: 40 10% 25%;
+    --popover: 40 33% 93%;
+    --popover-foreground: 40 10% 25%;
+    --primary: 11 55% 70%; /* Rosewater */
+    --primary-foreground: 40 10% 25%;
+    --secondary: 275 80% 65%; /* Mauve */
+    --secondary-foreground: 40 33% 98%;
+    --muted: 40 33% 90%;
+    --muted-foreground: 40 10% 45%;
+    --accent: 275 80% 75%; /* Lighter Mauve */
+    --accent-foreground: 40 10% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 20% 88%;
+    --input: 40 20% 85%;
+    --ring: 11 55% 70%;
     --radius: 0.75rem;
+
+    --chart-1: 11 55% 70%;
+    --chart-2: 275 80% 65%;
+    --chart-3: 190 60% 65%;
+    --chart-4: 30 70% 70%;
+    --chart-5: 140 50% 65%;
   }
+
   .dark {
-    --background: 240 10% 15%; /* Macchiato Base */
-    --foreground: 240 12% 80%; /* Macchiato Text */
-    --card: 240 8% 13%; /* Macchiato Mantle */
-    --card-foreground: 240 12% 80%; /* Macchiato Text */
-    --popover: 240 8% 13%; /* Macchiato Mantle */
-    --popover-foreground: 240 12% 80%; /* Macchiato Text */
-    --primary: 217 83% 82%; /* Macchiato Mauve */
-    --primary-foreground: 240 10% 15%; /* Macchiato Base */
-    --secondary: 357 100% 80%; /* Macchiato Rosewater */
-    --secondary-foreground: 240 10% 15%; /* Macchiato Base */
-    --muted: 240 7% 18%; /* Macchiato Surface2 */
-    --muted-foreground: 240 7% 59%; /* Macchiato Subtext0 */
-    --accent: 258 92% 86%; /* Macchiato Lavender */
-    --accent-foreground: 240 10% 15%; /* Macchiato Base */
-    --destructive: 350 83% 80%; /* Macchiato Red */
-    --destructive-foreground: 240 10% 15%; /* Macchiato Base */
-    --border: 240 5% 26%; /* Macchiato Overlay0 */
-    --input: 240 6% 22%; /* Macchiato Surface1 */
-    --ring: 217 83% 82%; /* Macchiato Mauve */
-    --chart-1: 217 83% 82%; /* Macchiato Mauve */
-    --chart-2: 350 83% 80%; /* Macchiato Red */
-    --chart-3: 27 100% 81%; /* Macchiato Peach */
-    --chart-4: 178 71% 78%; /* Macchiato Teal */
-    --chart-5: 201 88% 79%; /* Macchiato Sapphire */
+    --background: 240 10% 15%;
+    --foreground: 240 12% 80%;
+    --card: 240 8% 13%;
+    --card-foreground: 240 12% 80%;
+    --popover: 240 8% 13%;
+    --popover-foreground: 240 12% 80%;
+    --primary: 11 55% 70%; /* Rosewater */
+    --primary-foreground: 240 10% 15%;
+    --secondary: 275 80% 65%; /* Mauve */
+    --secondary-foreground: 240 10% 15%;
+    --muted: 240 7% 18%;
+    --muted-foreground: 240 7% 59%;
+    --accent: 275 80% 75%;
+    --accent-foreground: 240 10% 15%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5% 26%;
+    --input: 240 6% 22%;
+    --ring: 11 55% 70%;
+
+    --chart-1: 11 55% 70%;
+    --chart-2: 275 80% 65%;
+    --chart-3: 190 60% 65%;
+    --chart-4: 30 70% 70%;
+    --chart-5: 140 50% 65%;
   }
 }
 
@@ -67,6 +66,6 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
   }
 }
