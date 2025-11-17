@@ -7,7 +7,7 @@ import { SiteHeader } from '@/components/site-header';
 
 export const metadata: Metadata = {
   title: 'Yonder',
-  description: 'A beautifully designed application with a touch of magic.',
+  description: 'The essential digital ecosystem for students.',
 };
 
 export default function RootLayout({

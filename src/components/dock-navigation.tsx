@@ -2,7 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, LayoutGrid, MessageSquare, UserCircle } from "lucide-react";
+import {
+  Home,
+  Briefcase,
+  MessageSquare,
+  Rocket,
+  UserCircle,
+} from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import {
@@ -14,8 +20,9 @@ import {
 
 const navItems = [
   { href: "/", label: "Home", icon: Home },
-  { href: "/explore", label: "Explore", icon: LayoutGrid },
-  { href: "/messages", label: "Messages", icon: MessageSquare },
+  { href: "/projects", label: "Projects", icon: Briefcase },
+  { href: "/channels", label: "Channels", icon: MessageSquare },
+  { href: "/career", label: "Career", icon: Rocket },
   { href: "/profile", label: "Profile", icon: UserCircle },
 ];
 
