@@ -1,4 +1,5 @@
 import { FeedPost } from '@/components/feed-post';
+import { NewsfeedSummarizer } from '@/components/newsfeed-summarizer';
 import { StatusComposer } from '@/components/status-composer';
 
 const posts = [
@@ -23,7 +24,7 @@ const posts = [
     },
     timestamp: '5h ago',
     content:
-      'Anyone in CHEM-102 having trouble with the latest problem set? The thermodynamics questions are tricky. I\'m thinking of starting a study group in the library tomorrow around 2 PM.',
+      "Anyone in CHEM-102 having trouble with the latest problem set? The thermodynamics questions are tricky. I'm thinking of starting a study group in the library tomorrow around 2 PM.",
     likes: 25,
     comments: 8,
   },
@@ -58,6 +59,7 @@ export default function Home() {
 
       <main className="max-w-2xl mx-auto space-y-8">
         <StatusComposer />
+        <NewsfeedSummarizer />
         <div className="flex flex-col gap-8">
           {posts.map(post => (
             <FeedPost key={post.id} post={post} />
