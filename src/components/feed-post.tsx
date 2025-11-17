@@ -5,6 +5,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Heart, MessageCircle, Share2 } from 'lucide-react';
+import { useState } from 'react';
+import { cn } from '@/lib/utils';
 
 type Post = {
   id: string;
@@ -22,8 +24,14 @@ type Post = {
 };
 
 export function FeedPost({ post }: { post: Post }) {
-  return (
-    <Card className="bg-card/60 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl">
+  const [isLiked, setIsLiked] = useState(false);
+
+  const handleLike = () => {
+    setIsLiked(!isLiked);
+  };
+
+  return (    
+    <Card className="bg-card/60 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl animate-in fade-in slide-in-from-bottom-5 duration-500">
       <CardHeader className="flex flex-row items-center gap-4">
         <Avatar>
           <AvatarImage src={post.author.avatarUrl} alt={post.author.name} />
@@ -57,9 +65,9 @@ export function FeedPost({ post }: { post: Post }) {
       </CardContent>
       <CardFooter className="flex justify-between items-center">
         <div className="flex gap-4 text-muted-foreground">
-          <Button variant="ghost" size="sm" className="flex items-center gap-2">
-            <Heart size={18} />
-            <span>{post.likes}</span>
+          <Button variant="ghost" size="sm" className="flex items-center gap-2" onClick={handleLike}>
+            <Heart size={18} className={cn('transition-all duration-300', isLiked ? 'text-red-500 fill-current' : '')} />
+            <span>{post.likes + (isLiked ? 1 : 0)}</span>
           </Button>
           <Button variant="ghost" size="sm" className="flex items-center gap-2">
             <MessageCircle size={18} />
